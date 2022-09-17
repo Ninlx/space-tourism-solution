@@ -1,0 +1,119 @@
+@use "../utils" as *;
+
+#main .banner-tech {
+  &__left-content {
+    margin-top: rem(210);
+    margin-left: rem(150);
+  }
+
+  &__title {
+    h2 {
+      font-family: var(--barlow-condensed-reg);
+      font-size: rem(28);
+      letter-spacing: rem(4.725);
+      line-height: rem(34);
+      color: var(--white) !important;
+
+      span {
+        font-family: var(--barlow-condensed-bold);
+        mix-blend-mode: normal;
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &__left-pagination {
+    margin-top: rem(135.75);
+    margin-right: rem(50);
+  }
+
+  &__left-info {
+    padding-top: rem(135.75);
+  }
+
+  &__round {
+    position: relative;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(32);
+    overflow: hidden;
+  }
+
+  &__pagination-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: rem(3.75);
+    font-family: var(--bellefair);
+    font-size: rem(32);
+    letter-spacing: rem(2);
+    line-height: rem(37);
+    color: var(--white);
+    border-radius: 50%;
+    border: rem(1) solid var(--white);
+  }
+
+  &__pagination-links[aria-current="page"] {
+    color: var(--secondary) !important;
+    border: none;
+    background: var(--white);
+  }
+
+  &__text-content {
+    width: rem(470);
+    height: rem(303);
+  }
+
+  &__sub-title {
+    width: rem(152.75);
+    height: rem(19);
+    margin-bottom: rem(12);
+
+    h2 {
+      font-family: var(--barlow-condensed-reg);
+      font-size: rem(16);
+      line-height: rem(19);
+      letter-spacing: rem(2.7);
+      color: var(--primary) !important;
+    }
+  }
+
+  &__content-title {
+    width: rem(470);
+    height: rem(64);
+    margin-bottom: rem(20);
+
+    h1 {
+      font-family: var(--bellefair);
+      font-size: rem(56);
+      line-height: rem(64);
+      color: var(--white) !important;
+    }
+  }
+
+  &__desc {
+    width: rem(444);
+    height: rem(192);
+
+    p {
+      font-family: var(--barlow);
+      font-size: rem(18);
+      line-height: rem(32);
+      color: var(--primary) !important;
+    }
+  }
+
+  &__image {
+    margin-top: rem(272);
+  }
+}

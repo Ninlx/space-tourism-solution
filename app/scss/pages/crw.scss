@@ -1,0 +1,134 @@
+@use "../utils" as *;
+
+#main .banner-crew {
+  &__left {
+    padding-left: rem(25);
+    width: 100%;
+    height: 100vh;
+
+    @include brkpnt-down(md) {
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding: 0 !important;
+    }
+  }
+
+  &__left-content {
+    margin-bottom: rem(95);
+    margin-left: rem(70);
+
+    @include brkpnt-down(md) {
+      margin: 0 !important;
+    }
+  }
+
+  &__title {
+    h2 {
+      font-family: var(--barlow-condensed-reg);
+      font-size: 1.75rem;
+      letter-spacing: 0.295rem;
+      color: var(--white) !important;
+
+      span {
+        font-family: var(--barlow-condensed-bold);
+        mix-blend-mode: normal;
+        opacity: 0.25;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: rem(155);
+  }
+
+  &__pos-title {
+    @include brkpnt-down(md) {
+      text-align: center;
+    }
+    h1 {
+      font-family: var(--bellefair);
+      font-size: rem(32);
+      color: var(--white) !important;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+
+  &__name {
+    h1 {
+      font-family: var(--bellefair);
+      font-size: rem(56);
+      margin-top: 1.25rem;
+      color: var(--white) !important;
+    }
+  }
+
+  &__desc {
+    @include brkpnt-down(md) {
+      text-align: center;
+    }
+
+    p {
+      max-width: 27.75rem;
+      font-family: var(--barlow);
+      font-size: rem(18);
+      line-height: 1.8;
+      padding-top: 0.625rem;
+      color: var(--primary) !important;
+
+      @include brkpnt-down(md) {
+        max-width: rem(458);
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: rem(120);
+  }
+
+  &__round {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: rem(20);
+  }
+
+  &__pagination-links {
+    width: rem(15);
+    height: rem(15);
+    border-radius: 50%;
+    display: block;
+    opacity: 0.17;
+    background-color: var(--white);
+    cursor: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__pagination-links[aria-current="page"] {
+    opacity: 1;
+  }
+
+  &__right {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__person {
+    height: auto;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
